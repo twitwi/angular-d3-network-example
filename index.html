@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="network-test.js"></script>
+</head>
+
+<body ng-app="network-test" ng-controller="network-test">
+    <my-network spring="false"
+                nodes="currentNodes" edges="currentEdges"
+                on-selection-change="selected"
+                width="500"
+                height="500"
+                ></my-network>
+    <my-distribution normalize="true"
+                     values="currentData"
+                     width="100"
+                     height="500"
+                     ></my-distribution>
+    <my-distribution
+                     values="currentData"
+                     width="50"
+                     height="500"
+                     ></my-distribution>
+
+</body>
+
+</html>

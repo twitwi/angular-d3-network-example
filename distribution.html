@@ -1,0 +1,15 @@
+<div class="distribution" style="display: inline-block; width: {{width}}px; height: {{height}}px; border: 1px solid black; position: relative;">
+    <div ng-repeat="v in values track by $index"
+         ng-style="{
+                   padding: '1px',
+                   'box-sizing': 'border-box',
+                   position: 'absolute',
+                   background: 'rgba(0,0,0,'+(normalize ? v / sumValues : v)+')',
+                   top: ($index * 100 / values.length)+'%',
+                   height: (100 / values.length)+'%',
+                   width: '100%',
+                   'border-top': '1px solid black',
+                   'border-bottom': '1px solid white'
+                   }"
+         title="{{v}} ({{100*v/sumValues}}%)"></div>
+</div>
